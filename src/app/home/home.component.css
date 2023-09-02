@@ -1,0 +1,136 @@
+
+.hero {
+    height: 600px;
+    width: 100%;
+    background-color: var(--violet-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero h2 {
+    color: white;
+}
+
+.hero a {
+    height: 48px;
+    width: 124px;
+    background-color: white;
+    color: var(--violet-dark);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero a:hover {
+    background-color: rgb(208, 215, 247);
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px 0;
+    color: var(--violet);
+    gap: 24px;
+}
+
+.presentation .services {
+    width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.service .service-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.service h3 {
+    font-size: 18px;
+}
+
+.service p {
+    font-size: 16px;
+}
+
+.service .service-description {
+    text-align: center;
+    color: var(--slate);
+    opacity: 0.9;
+}
+
+.ornament {
+    width: 1280px;
+    height: 108px;
+    margin: 96px auto;
+}
+
+.happy-person {
+    width: 1280px;
+    height: 480px;
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.motivation {
+    width: 512px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.motivation h3 {
+    font-size: x-large;
+    color: var(--slate-light);
+    align-self: center;
+    text-align: right;
+}
+
+.motivation p {
+   color:  var(--slate-light);
+   text-align: right;
+}
+
+.motivation a {
+    padding: 8px 18px;
+    width: fit-content;
+    border: 1px solid var(--violet);
+    border-radius: 4px;
+    align-self: flex-end;
+}
+
+.footer {
+    height: 56px;
+    background-color: var(--neutral-light);
+    margin-top: 36px;
+}
+
+.footer .options {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    margin: auto;
+}
+
+.footer .options a:first-child {
+    color: var(--violet);
+    font-weight: 600;
+}

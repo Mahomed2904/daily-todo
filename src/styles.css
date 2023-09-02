@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Khula', sans-serif;
+}
+
+:root {
+    --violet: #6F4EB5;
+    --violet-dark: #4E2F8F;
+    --violet-light: rgba(113, 102, 244, 66);
+    --slate: #000000;
+    --slate-light: #555555;
+    --neutral-light: #DEDEDE;
+    --violet-800: #331C66;
+
+}

@@ -1,0 +1,21 @@
+<main class="login">
+    <div class="hero">
+        <img src="assets/img/hero-login.svg">
+        <p>Using technologies and willpower to improve daily time utilization</p>
+    </div>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form class="form" method="post" action="/">
+            <app-form-text-input inputName="Email" inputType="text" labelName="Email" placehoder="please insert your email"></app-form-text-input>
+            <div class="password">
+                <app-form-text-input inputName="Password" inputType="password" labelName="Password" placehoder="*******"></app-form-text-input>
+                <a href="/password-recovery" class="recovery-password">I forget my password</a>
+            </div>
+            <button class="button-signin">Signin</button>
+            <div class="signup-suggestion">
+                <p>You don't have account?</p>
+                <a href="/signup">Create  ccount</a>
+            </div>
+        </form>
+    </div>
+</main>

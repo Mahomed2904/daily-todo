@@ -1,0 +1,13 @@
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-input input {
+    padding: 12px 10px;
+    font-size: 14px;
+    border: 1px solid var(--violet);
+    border-radius: 4px;
+    outline:violet;
+}

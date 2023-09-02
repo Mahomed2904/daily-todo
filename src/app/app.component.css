@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    color: black
+}
+
+.container p {
+    color: slategray;
+}
+
+.container a {
+    margin-top: 20px;
+}
+
+.container nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.container nav ul a {
+    padding: 8px 10px;
+    border: 1px solid slategray;
+    border-radius: 4px;
+}
+
+.container nav a {
+    text-decoration: none;
+    color: black
+}
+
+
+.container nav a:hover {
+    background-color: rgb(215, 215, 215);
+}

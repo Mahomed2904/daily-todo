@@ -1,0 +1,26 @@
+<main class="signup">
+    <div class="hero">
+        <p>The beginning</p>
+        <img src="assets/img/signup-hero.svg">
+    </div>
+    <div class="form-container">
+        <h2>signup</h2>
+        <form class="form" method="post" action="/">
+            <div class="form-row">
+                <app-form-text-input inputName="Email" inputType="text" labelName="Email" placehoder="please insert your email"></app-form-text-input>
+                <app-form-text-input inputName="Name" inputType="text" labelName="Name" placehoder="please insert your name"></app-form-text-input>
+            </div>    
+            <app-form-text-input inputName="Phone-Number" inputType="text" labelName="Phone Number" placehoder="please insert your name"></app-form-text-input>
+            <div class="form-row">
+                <app-form-text-input inputName="Password" inputType="password" labelName="Password" placehoder="******"></app-form-text-input>
+                <app-form-text-input inputName="confirm-password" inputType="password" labelName="Confirm Password" placehoder="******"></app-form-text-input>
+            </div>
+            <button class="button-signin">Signup</button>
+            <div class="signup-suggestion">
+                <p>Do you already have account?</p>
+                <a href="/login">Login now</a>
+            </div>
+        </form>
+    </div>
+</main>
+
