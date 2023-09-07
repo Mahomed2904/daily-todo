@@ -3,26 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { HomeComponent } from './home/home.component';
 import { LucideAngularModule, Moon } from 'lucide-angular';
-import { LoginComponent } from './login/login.component';
-import { FormTextInputComponent } from './form-elements/form-text-input/form-text-input.component';
-import { SignupComponent } from './signup/signup.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UsersModule } from './access-control/users.module';
+import { PresentationModule } from './presentation/presentation.module';
+import { TodoModule } from './todo/todo.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    HomeComponent,
-    LoginComponent,
-    FormTextInputComponent,
-    SignupComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
+    PresentationModule,
+    UsersModule,
+    TodoModule,
     AppRoutingModule,
-    LucideAngularModule.pick({Moon})
+    LucideAngularModule.pick({Moon}),
   ],
   providers: [],
   bootstrap: [AppComponent]

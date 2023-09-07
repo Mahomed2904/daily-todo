@@ -1,10 +1,13 @@
 .signup {
     height: calc(100vh - 76px);
-    width: 1280px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 42px;
+    gap: 20px;
 }
 
 .hero {
@@ -12,8 +15,19 @@
     flex-direction: column;
 }
 
+@media(max-width: 1000px) {
+    .signup {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        display: none;
+    }
+}
+
 .signup .hero img {
-    height: 512px;
+    height: 480px;
 }
 
 .hero p {
@@ -23,9 +37,9 @@
 }
 
 .form-container {
-    padding: 48px;
-    width: 768px;
-    border: 1px solid var(--violet);
+    padding: 42px;
+    width: 556px;
+    border: 1px solid var(--violet-light);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -38,7 +52,8 @@
     color: var(--violet);
     font-weight: 600;
     font-size: 20px;
-    border-bottom: 1px solid var(--violet);
+    border-bottom: 1px solid var(--violet-light);
+    padding-bottom: 8px;
 }
 
 .form-container .form {
@@ -81,16 +96,23 @@
 
 .form .button-signin {
     width: fit-content;
-    padding: 12px 18px;
+    padding: 10px 16px;
     border-radius: 4px;
     border: none;
     background-color: var(--violet);
     color: white;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .form .button-signin:hover {
     cursor: pointer;
+}
+
+.form .signup-suggestion {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .form .signup-suggestion a {

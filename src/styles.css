@@ -15,9 +15,10 @@ body {
 :root {
     --violet: #6F4EB5;
     --violet-dark: #4E2F8F;
-    --violet-light: rgba(113, 102, 244, 66);
-    --slate: #000000;
+    --violet-light: rgba(113, 102, 244, 0.66);
+    --slate: #3f3f3f;
     --slate-light: #555555;
+    --slate-dark: #2f2f2f;
     --neutral-light: #DEDEDE;
     --violet-800: #331C66;
 

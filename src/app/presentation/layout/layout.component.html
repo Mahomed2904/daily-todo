@@ -1,7 +1,7 @@
 <div class="nav-bar">
-    <a href="/" class="site-name">
+    <a routerLink="/" class="site-name">
         <div>
-            <img src="assets/img/daily-icon.svg" width="36" height="36">
+            <img src="assets/img/daily-icon.svg">
         </div>
         <div>
             <h1>Daily Todo</h1>
@@ -9,6 +9,7 @@
     </a>
     <div class="others">
         <lucide-angular name="moon" class="moon"></lucide-angular>
-        <a href="/login">Login</a>
+        <a routerLink="/ap/signin">Login</a>
     </div>
 </div>
+<router-outlet></router-outlet>

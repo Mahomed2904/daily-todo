@@ -1,6 +1,6 @@
 
 .hero {
-    height: 600px;
+    height: 512px;
     width: 100%;
     background-color: var(--violet-dark);
     display: flex;
@@ -10,16 +10,23 @@
     gap: 20px;
 }
 
+/* @media(max-height: 1366px) {
+    .hero {
+        height: 430px;
+    }
+} */
+
 .hero h2 {
     color: white;
+    font-size: x-large;
 }
 
 .hero a {
-    height: 48px;
-    width: 124px;
+    padding: 10px 20px;
     background-color: white;
     color: var(--violet-dark);
     border-radius: 4px;
+    font-size: small;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,36 +42,42 @@
     align-items: center;
     margin: 48px 0;
     color: var(--violet);
-    gap: 24px;
+    gap: 36px;
+}
+
+.presentation h2 {
+    font-size: large;
 }
 
 .presentation .services {
-    width: 1280px;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .service {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    gap: 8px;
+    width: 350px;
 }
 
 .service .service-image img {
-    width: 300px;
-    height: 300px;
+    width: 256px;
+    height: 256px;
     border-radius: 100%;
 }
 
 .service h3 {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .service p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .service .service-description {
@@ -74,17 +87,31 @@
 }
 
 .ornament {
-    width: 1280px;
-    height: 108px;
+    max-width: 1200px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
     margin: 96px auto;
 }
 
+.ornament img {
+    max-width: 1200px;
+    height: 96px;
+}
+
 .happy-person {
-    width: 1280px;
-    height: 480px;
+    max-width: 1200px;
+    height: 384px;
     margin: 32px auto;
     display: flex;
     justify-content: space-between;
+}
+
+@media(max-width: 1366px) {
+    .happy-person {
+        box-sizing: border-box;
+        padding: 0 32px;
+    }
 }
 
 .motivation {
@@ -105,20 +132,27 @@
 .motivation p {
    color:  var(--slate-light);
    text-align: right;
+   font-size: small;
 }
 
 .motivation a {
-    padding: 8px 18px;
+    padding: 7px 16px;
     width: fit-content;
     border: 1px solid var(--violet);
     border-radius: 4px;
     align-self: flex-end;
+    font-size: 14px;
+}
+
+.motivation a:hover {
+    background-color: var(--neutral-light);
 }
 
 .footer {
-    height: 56px;
+    height: 48px;
     background-color: var(--neutral-light);
     margin-top: 36px;
+    font-size: small;
 }
 
 .footer .options {
@@ -126,7 +160,7 @@
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    width: 1280px;
+    max-width: 1200px;
     margin: auto;
 }
 

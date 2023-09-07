@@ -1,0 +1,14 @@
+<div class="nav-bar">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page"  class="site-name">
+        <div>
+            <img src="assets/img/daily-icon.svg">
+        </div>
+        <div>
+            <h1>Daily Todo</h1>
+        </div>
+    </a>
+    <div class="others">
+        <lucide-angular name="moon" class="moon"></lucide-angular>
+    </div>
+</div>
+<router-outlet></router-outlet>
