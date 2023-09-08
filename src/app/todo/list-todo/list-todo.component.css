@@ -1,0 +1,283 @@
+main {
+    max-width: 1260px;
+    margin: 14px auto;
+    display: grid;
+    grid-template-areas: 
+        "Title Title Nothing Line"
+        "Buttons Search Nothing Add"
+        "DailyInfo TodoList Nothing -";
+    grid-template-columns: 290px 1fr 126px 80px;
+    row-gap: 8px;
+    column-gap: 40px;
+}
+
+
+.title {
+    grid-area: Title;
+    font-size: 16px;
+    color: var(--violet);
+    font-weight: 700;
+}
+
+.nothing {
+    grid-area: Nothing;
+}
+
+.line {
+    grid-area: Line;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.line div {
+    width: 56px;
+    height: 3px;
+    background-color: var(--violet);
+}
+
+.buttons {
+    grid-area: Buttons;
+    display: flex;
+    gap: 8px;
+}
+
+.buttons button {
+    font-size: 12px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid var(--violet-light);
+    color: var(--violet);
+}
+
+.buttons button:hover {
+    cursor: pointer;
+}
+
+.buttons button:nth-child(3) {
+    width: 100%;
+    padding: 8px 28px;
+}
+
+.buttons .selected {
+    background-color: var(--violet);
+    color: white;
+}
+
+
+.search {
+    grid-area: Search;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--violet-light);
+    border-radius: 16px;
+}
+
+.search label {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.search label .icon {
+    box-sizing: border-box;
+    padding: 0 16px;
+    color: var(--violet-light);
+}
+
+.search:has(input:focus) + .search {
+    border: 1px solid var(--violet);
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.search:has(input:focus) {
+    border: 1px solid var(--violet);
+    outline: 1px solid var(--violet);
+}
+
+.search:has(input:focus) label .icon {
+    color: var(--violet);
+}
+
+.search input::placeholder {
+    font-size: 12px;
+    color: var(--violet-light);
+}
+
+.add {
+    grid-area: Add;
+    font-size: 12px;
+    display: flex;
+    justify-content: end;
+}
+
+.add a {
+    padding: 7px 18px;
+    background-color: var(--violet);
+    color: white;
+    border-radius: 4px;
+}
+
+.daily-info {
+    grid-area: DailyInfo;
+    height: 200px;
+    border: 1px solid var(--violet-light);
+    border-radius: 4px;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.daily-info .day {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--violet);
+}
+
+.daily-info .date-and-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--violet-light);
+}
+
+.daily-info .todo-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.daily-info .todo-details div {
+    display: flex;
+    gap: 6px;
+}
+
+.daily-info .todo-details div span:first-child {
+    color: var(--violet);
+    font-weight: 700;
+}
+
+.todo-list {
+    grid-area: TodoList;
+    height: calc(100vh - 170px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.todo-list .single-todo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    display: grid;
+    grid-template-areas: 
+        "Icon Title"
+        "Icon Schedule"
+        "Icon ProgressBar";
+    grid-template-columns: 53px 1fr;
+    border: 1px solid var(--violet-light);
+    border-radius: 4px;
+    column-gap: 8px;
+    font-size: 11px;
+}
+
+.todo-list .single-todo:hover {
+    cursor: pointer;
+    background-color: rgb(238, 233, 253);
+}
+
+.todo-list .single-todo .todo-title {
+    grid-area: Title;
+    font-size: 13px;
+    color: var(--violet);
+}
+
+.todo-list .single-todo .todo-icon {
+    grid-area: Icon;
+    height: 53px;
+    border-radius: 100%;
+    background-color: var(--violet-light);
+} 
+
+.todo-list .single-todo .todo-schedule {
+    grid-area: Schedule;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list .single-todo .todo-progress {
+    grid-area: ProgressBar;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    row-gap: 4px;
+} 
+
+.todo-list .single-todo .todo-progress .progress-bar {
+    grid-area: ProgressBar;
+    flex: 9;
+    height: 8px;
+    background-color: var(--violet-super-light);
+} 
+
+.todo-list .single-todo .todo-progress .progress-bar div {
+    height: 100%;
+    width: 60%;
+    background-color: var(--violet-light);
+}
+
+.todo-list .single-todo .left-time {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    font-size: 9px;
+    color: gray;
+}
+
+.todo-list .single-todo .left-time span {
+    padding: 0 8px;
+    padding-top: 2px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    border-radius: 2px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--violet-super-light);
+    /* border-radius: 3px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--violet-light);
+    /* border-radius: 3px; */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--violet);
+  }

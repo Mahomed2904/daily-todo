@@ -3,6 +3,8 @@ import { RouterModule, RouterStateSnapshot, Routes, TitleStrategy } from '@angul
 import { LayoutComponent } from './layout/layout.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { Title } from '@angular/platform-browser';
+import { ListTodoComponent } from './list-todo/list-todo.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,16 @@ const routes: Routes = [
           path: "dashbord",
           title: "Dashbord",
           component: DashbordComponent
+        },
+        {
+          path: "todo-list",
+          title: "Todo List",
+          component: ListTodoComponent
+        },
+        {
+          path: "add-todo",
+          title: "Add Todo",
+          component: AddTodoComponent
         }
      ]
   }

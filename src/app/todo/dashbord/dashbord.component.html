@@ -1,1 +1,47 @@
-<p>dashbord works!</p>
+<main class="dashbord">
+    <h3>Welcome back</h3>
+    <div class="container">
+        <section class="user-section">
+            <div class="user-box">
+                <img src="assets/img/profile_photo.jpg">
+                <h5>Mahomed Aly Issumail</h5>
+                <a routerLink="/profile">Profile</a>
+            </div>
+        </section>
+        <section class="todo-status">
+            <div class="limitator">
+                <div class="line"></div>
+                <div class="content">
+                    <div class="todo">
+                        <div class="left">
+                            <h3>Your have a total of</h3>
+                            <h2>68</h2>
+                            <span>todo</span>
+                        </div>
+                        <a [routerLink]="['../todo-list', {day: 'ALL'}]" class="right">See</a>
+                    </div>
+                    <div class="todo">
+                        <div class="left">
+                            <h3>Today you have</h3>
+                            <h2>04</h2>
+                            <span>todo</span>
+                        </div>
+                        <a [routerLink]="['../todo-list', {day: 'TODAY'}]" class="right">See</a>
+                    </div>
+                    <div class="todo">
+                        <div class="left">
+                            <h3>Tomorow you have</h3>
+                            <h2>68</h2>
+                            <span>todo</span>
+                        </div>
+                        <a [routerLink]="['../todo-list', {day: 'TOMOROW'}]" class="right">See</a>
+                    </div>
+                </div>
+                <div class="waves">
+                    <img src="assets/img/wave.svg">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

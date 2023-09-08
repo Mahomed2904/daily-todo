@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
+import { LucideAngularModule, Moon, Search } from 'lucide-angular';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EditTodoComponent } from './edit-todo/edit-todo.component';
   ],
   imports: [
     CommonModule,
-    TodoRoutingModule
+    TodoRoutingModule,
+    LucideAngularModule.pick({Moon, Search})
   ]
 })
 export class TodoModule { }

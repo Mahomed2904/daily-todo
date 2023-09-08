@@ -1,2 +1,28 @@
-<p>layout works!</p>
+<header class="nav-container">
+    <nav class="nav-bar">
+        <a routerLink="./dashbord" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page"  class="site-name">
+            <div>
+                <img src="assets/img/daily-icon.svg">
+            </div>
+            <div>
+                <h1>Daily Todo</h1>
+            </div>
+        </a>
+        <div class="others">
+            <nav class="inner-nav">
+                <ul>
+                    <li><a routerLink="./dashbord" class="selected">Home</a></li>
+                    <li><a [routerLink]="['./todo-list', {day: 'ALL'}]">Todos</a></li>
+                </ul>
+            </nav>
+            <div class="separator"></div>
+            <div class="action-icons">
+                <lucide-angular name="moon" class="moon"></lucide-angular>
+                <div class="user-icon">
+                    <img src="assets/img/profile_photo.jpg">
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 <router-outlet></router-outlet>
