@@ -26,7 +26,7 @@ main {
 .line {
     grid-area: Line;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -175,7 +175,7 @@ main {
 
 .todo-list {
     grid-area: TodoList;
-    height: calc(100vh - 170px);
+    height: calc(100vh - 168px);
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -280,4 +280,9 @@ main {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: var(--violet);
+  }
+
+  .modal {
+    position: absolute;
+    inset: 0;
   }

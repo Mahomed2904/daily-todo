@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-text-area',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-text-area.component.css']
 })
 export class FormTextAreaComponent {
-
+  @Input() inputName: string | undefined
+  @Input() labelName: string | undefined
+  @Input() inputType: 'text' | 'number' | "password" | undefined
+  @Input() placehoder: string = ""
 }

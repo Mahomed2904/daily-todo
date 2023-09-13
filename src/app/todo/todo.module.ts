@@ -7,7 +7,9 @@ import { LayoutComponent } from './layout/layout.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
-import { LucideAngularModule, Moon, Search } from 'lucide-angular';
+import { LucideAngularModule, Moon, Search, X, Upload } from 'lucide-angular';
+import { FormElementsModule } from '../form-elements/form-elements.module';
+import { TodoDetailsComponent } from './todo-details/todo-details.component';
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { LucideAngularModule, Moon, Search } from 'lucide-angular';
     LayoutComponent,
     ListTodoComponent,
     AddTodoComponent,
-    EditTodoComponent
+    EditTodoComponent,
+    TodoDetailsComponent
   ],
   imports: [
     CommonModule,
     TodoRoutingModule,
-    LucideAngularModule.pick({Moon, Search})
+    FormElementsModule,
+    LucideAngularModule.pick({Moon, Search, X, Upload})
   ]
 })
 export class TodoModule { }

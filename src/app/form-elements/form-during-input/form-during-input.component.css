@@ -1,0 +1,34 @@
+.duration-field {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    font-size: 12px;
+    gap: 3px;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--violet-light);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+label {
+    color: var(--slate-dark);
+}
+
+.text-area input {
+    height: 64px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.text-area span {
+    padding-top: 2px;
+    text-align: center;
+    background-color: #cfbbfa;
+}

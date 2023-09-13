@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-edit-todo',
-  templateUrl: './edit-todo.component.html',
-  styleUrls: ['./edit-todo.component.css']
+  selector: 'app-todo-details',
+  templateUrl: './todo-details.component.html',
+  styleUrls: ['./todo-details.component.css']
 })
-export class EditTodoComponent {
+export class TodoDetailsComponent {
   constructor(private router: Router, private location: Location) {}
 
     backPage() {

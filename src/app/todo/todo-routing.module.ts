@@ -5,6 +5,8 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { Title } from '@angular/platform-browser';
 import { ListTodoComponent } from './list-todo/list-todo.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
+import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { EditTodoComponent } from './edit-todo/edit-todo.component';
 
 const routes: Routes = [
   {
@@ -19,13 +21,25 @@ const routes: Routes = [
         {
           path: "todo-list",
           title: "Todo List",
-          component: ListTodoComponent
+          component: ListTodoComponent,
+          children: [
+            {
+              path: "add-todo",
+              title: "Add Todo",
+              component: AddTodoComponent
+            },
+            {
+              path: "todo-details/:id",
+              title: "Todo Details",
+              component: TodoDetailsComponent
+            },
+            {
+              path: "edit-todo/:id",
+              title: "Edit Todo",
+              component: EditTodoComponent
+            },
+          ]
         },
-        {
-          path: "add-todo",
-          title: "Add Todo",
-          component: AddTodoComponent
-        }
      ]
   }
 ];

@@ -1,0 +1,31 @@
+<div class="form-input">
+    <label [for]="labelId">{{labelName}}</label>
+    <div class="labelContainer" [class.dont-show]="imageUrl" [id]="labelId">
+        <label [for]="inputName">
+            <lucide-angular name="upload" class="upload"></lucide-angular>
+            <p>Upload from storage</p>
+            <input [id]="inputName" [name]="inputName" [placeholder]="placehoder" type="file" accept="image/*" (change)="uploadImageFromStorage($event)">
+        </label>
+        <div class="separator">
+        </div>
+        <button type="button" class="link" (click)="showModalLink()">
+            <lucide-angular name="link" class="load"></lucide-angular>
+            <span>Upload from existing link</span>
+        </button>
+    </div>
+    <div class="imageContainer" [class.dont-show]="!imageUrl">
+        <img src="assets/img/linker.svg" class="linker"><img src="{{imageUrl}}">
+        <div class="line"></div>
+        <lucide-angular name="X" class="circle" (click)="closeModalLink()"></lucide-angular>
+    </div>
+</div>
+<section class="link-modal" [class]="showLinkModal">
+    <form class="modal-container" (submit)="uploadImageFromLink($event)">
+        <label for="link">Link to Load the image</label>
+        <input id="link" name="link" (change)="selectLink($event)">
+        <div class="buttons">
+            <button>Load</button>
+            <button type="button" (click)="closeModalLink()">Cancel</button>
+        </div>
+    </form>
+</section>

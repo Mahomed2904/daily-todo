@@ -15,7 +15,7 @@
          <input id="search" type="text" placeholder="Search">
     </div>
     <div class="add">
-        <a routerLink="../add-todo">Add</a>
+        <a routerLink="./add-todo">Add</a>
     </div>
     <div class="daily-info">
         <h5 class="day">Today</h5>
@@ -28,8 +28,8 @@
             <div><span>Left:</span> <span>12 Todo</span></div>
         </div>
     </div>
-    <div class="todo-list">
-        <div class="single-todo">
+    <ul class="todo-list">
+        <li class="single-todo" [routerLink]="['./todo-details', 1]">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -39,8 +39,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -50,8 +50,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -61,8 +61,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -72,8 +72,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -83,8 +83,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -94,9 +94,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-            
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -106,8 +105,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -117,8 +116,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -128,8 +127,8 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-        <div class="single-todo">
+        </li>
+        <li class="single-todo">
             <div class="todo-icon"></div>
             <h5 class="todo-title">Go to the market to buy a new car</h5>
             <p class="todo-schedule"><span>Monday, April 12 2023</span><span>12:00 PM</span></p>
@@ -139,8 +138,9 @@
                 </div>
                 <p class="left-time"><span>1 hour</span></p>
             </div>
-        </div>
-    </div>
+        </li>
+    </ul>
     <div class="nothing">
     </div>
 </main>
+<router-outlet></router-outlet>

@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--slate-dark);
+}
+
+.shedule {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--violet-light);
+    border-radius: 4px;
+}
+
+.shedule .date {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px;
+    padding: 8px;
+}
+
+.shedule .separator {
+    /* width: 1px;
+    height: 80px; */
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-left: 7px;
+    padding: 4px;
+    background-color: var(--violet-light);
+    border-radius: 100%;
+}
+
+.shedule .time {
+    width: 56%;
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    padding: 8px;
+}
+
+
+/**************** Input *************/
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 12px;
+    color: var(--slate)
+}
+
+.form-input input {
+    width: 36px;
+    padding: 10px 10px;
+    font-size: 12px;
+    border: 1px solid var(--violet-light);
+    border-radius: 4px;
+    outline:violet;
+}
+
+.form-input input:focus {
+    border: 1px solid var(--violet);
+    outline: 1px solid var(--violet);
+}
+
+input::placeholder {
+    color: var(--violet-light)
+}

@@ -1,6 +1,6 @@
 <header class="nav-container">
     <nav class="nav-bar">
-        <a routerLink="./dashbord" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page"  class="site-name">
+        <a routerLink="./dashbord" (click)="changeCurrentTo(1)" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page"  class="site-name">
             <div>
                 <img src="assets/img/daily-icon.svg">
             </div>
@@ -11,8 +11,8 @@
         <div class="others">
             <nav class="inner-nav">
                 <ul>
-                    <li><a routerLink="./dashbord" class="selected">Home</a></li>
-                    <li><a [routerLink]="['./todo-list', {day: 'ALL'}]">Todos</a></li>
+                    <li><a routerLink="./dashbord" [class.selected]="current == 1" (click)="changeCurrentTo(1)">Home</a></li>
+                    <li><a [routerLink]="['./todo-list', {day: 'ALL'}]" [class.selected]="current == 2" (click)="changeCurrentTo(2)">Todo</a></li>
                 </ul>
             </nav>
             <div class="separator"></div>

@@ -1,0 +1,229 @@
+main {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.todo-details {
+    background-color: white;
+    width: 500px;
+    border-radius: 8px;
+    padding: 16px 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .x {
+    color: var(--violet-light);
+}
+
+main .x:hover {
+    cursor: pointer;
+    color: var(--violet);
+}
+
+.todo-details .x {
+    color: var(--violet-light);
+}
+
+.todo-details >  h2 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: var(--violet);
+}
+
+.exit-container {
+    display: flex;
+    justify-content: end;
+}
+
+.todo-details .columns {
+    display: flex;
+    box-sizing: border-box;
+    padding-right: 20px;
+    gap: 32px;
+}
+
+.columns .details {
+    flex:  1;
+    padding-bottom: 32px;
+}
+
+.details .title-container {
+    width: 100%;
+    height: 156px;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: var(--violet);
+    color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.details .title-container h3 {
+    font-size: 16px;
+}
+
+.title-container .status {
+    background-color: white;
+    color: var(--red-light);
+    padding: 2px 10px;
+    border-radius: 18px;
+    justify-self: flex-end;
+    font-size: 12px;
+    align-self: flex-end;
+}
+
+
+.other-details {
+    padding: 16px 4px;
+    border-left: 1px solid var(--violet-light);
+    border-right: 1px solid var(--violet-light);
+    border-bottom: 1px solid var(--violet-light);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.other-details .label {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: var(--violet);
+    font-weight: 600;
+}
+
+.other-details p {
+    font-size: 14px;
+    padding-left: 16px;
+}
+
+.label span {
+    margin-left: 16px;
+    height: 12px;
+    padding: 0;
+}
+
+.label .subline {
+    display: flex;
+    align-items: center;
+}
+
+.subline .circle {
+    padding: 8px;
+    background-color: var(--violet);
+    border-radius: 100%;
+}
+
+.subline .line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--violet);
+}
+
+.shedule-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 8px;
+    gap: 2px;
+}
+
+.shedule-details h5 {
+    font-size: 600;
+    color: var(--slate-dark);
+}
+
+.shedule-details .line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--violet-light);
+}
+
+.shedule-details .start {
+    box-sizing: border-box;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.date, .time {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.date span, .time span {
+    display: flex;
+    box-sizing: border-box;
+    padding: 6px;
+    background-color: rgb(214, 214, 214);
+    border-radius: 4px;
+}
+
+.shedule-details .end {
+    box-sizing: border-box;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.super-line {
+    position: relative;
+}
+
+.super-line .circle {
+    position: absolute;
+    padding: 8px;
+    background-color: var(--violet);
+    border-radius: 100%;
+    bottom: -8px;
+    left: 56%;
+}
+
+
+main .columns .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .columns .buttons button:first-child {
+    margin-top: 1px;
+    border: 1px solid var(--violet);
+    padding: 12px 12px;
+    border-radius: 4px;
+    background-color: var(--violet);
+    color: white;
+    font-size: 11px;
+}
+
+main .columns .buttons button:nth-child(2) {
+    border: 1px solid var(--red-light);
+    padding: 12px 12px;
+    border-radius: 4px;
+    color: var(--red-light);
+    background-color: white;
+    font-size: 11px;
+    text-align: center;
+}
+
+main .columns .buttons button:hover {
+    cursor: pointer;
+}

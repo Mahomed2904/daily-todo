@@ -1,0 +1,30 @@
+<!-- <div class="form-input">
+    <label [for]="labelName">{{labelName}}</label>
+    <select [id]="inputName" [name]="inputName">
+        <option *ngFor="let i of elements;" value="{{i}}">
+            {{i}}
+        </option>
+    </select>
+</div> -->
+
+<div class="select-container">
+    <div class="select">
+        <label for="show-options" class="">{{labelName}}</label>
+        <input id="show-options" class="{{labelName}}" type="checkbox">
+        <div id="select-button" [class.expand-content]="inputName == 'month'">
+            <div id="selected-value">{{selectedValue.value}}</div>
+            <div id="chevrons">
+                <lucide-icon class="chevron" name="chevron-down" size="16"></lucide-icon>
+                <lucide-icon class="chevron" name="chevron-up" size="16"></lucide-icon>
+            </div>
+        </div>
+    </div>
+    <ul class="select-dropdown">
+        <li class="option" *ngFor="let e of elements">
+            <input *ngIf="selectedValue && selectedValue.id == e.id" type="radio" [name]="inputName" [id]="e.id" [value]="e.value" (click)="onChange(e.id, e.value)" checked>
+            <input *ngIf="!selectedValue || selectedValue?.id != e.id" type="radio" [name]="inputName" [id]="e.id" [value]="e.value" (click)="onChange(e.id, e.value)">
+            <label class="label">{{e.value}}</label>
+            <lucide-icon name="check" size="12"></lucide-icon>
+        </li>
+    </ul>
+</div>

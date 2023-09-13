@@ -1,0 +1,120 @@
+main {
+    padding: 0 12px;
+    min-height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+main .form-hero {
+    height: 530px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .form-hero h2 {
+    width: 400px;
+    height: 400px;
+    font-weight: 600;
+    color: var(--violet);   
+    text-align: center;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    /* background-image: url("./../../../assets/img/hero-1.jpg");
+    background-repeat: no-repeat; */
+}
+
+main .form-container {
+    /* width: 512px; */
+    height: fit-content;
+    /* margin-top: 24px; */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid var(--violet-light);
+    box-sizing: border-box;
+    padding: 36px 24px;
+    padding-top: 16px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+
+main .exit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .x {
+    color: var(--violet-light);
+}
+
+main .x:hover {
+    cursor: pointer;
+    color: var(--violet);
+}
+
+main h3 {
+    padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--violet);
+}
+
+main .columns {
+    display: flex;
+    gap: 36px;
+    padding-right: 8px;
+}
+
+main .columns .form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+main .columns .buttons {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .columns .buttons button:first-child {
+    margin-top: 1px;
+    border: 1px solid var(--violet);
+    padding: 12px 12px;
+    border-radius: 4px;
+    background-color: var(--violet);
+    color: white;
+    font-size: 11px;
+}
+
+main .columns .buttons button:nth-child(2) {
+    border: 1px solid var(--red-light);
+    padding: 12px 12px;
+    border-radius: 4px;
+    color: var(--red-light);
+    background-color: white;
+    font-size: 11px;
+    text-align: center;
+}
+
+main .columns .buttons button:hover {
+    cursor: pointer;
+}
+
+.duration-area {
+    margin-top: 71px;
+}

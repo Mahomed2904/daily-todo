@@ -1,0 +1,26 @@
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--slate)
+}
+
+.form-input textarea {
+    height: 64px;
+    padding: 10px 10px;
+    font-size: 12px;
+    border: 1px solid var(--violet-light);
+    border-radius: 8px;
+    outline:violet;
+    font-family: 'Khula', sans-serif;
+}
+
+.form-input textarea:focus {
+    border: 1px solid var(--violet);
+    outline: 1px solid var(--violet);
+}
+
+textarea::placeholder {
+    color: var(--violet-light)
+}

@@ -1,0 +1,69 @@
+<main>
+    <div class="todo-details">
+        <div class="exit-container"><lucide-icon name="X" class="x" size="22" (click)="backPage()"></lucide-icon></div>
+        <h2>Todo details</h2>
+        <div class="columns">
+            <div class="details">
+                <div class="title-container">
+                    <h3>Go to the market to by a new car</h3>
+                    <div class="status"><span>Expired</span></div>
+                </div>
+                <div class="other-details">
+                    <div class="label">
+                        <span>Description</span>
+                        <div class="subline">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <p>
+                        I will go to the market to buy a new car, because my current car is not good
+                    </p>
+                    <div class="label">
+                        <span>Sheduling</span>
+                        <div class="subline">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="shedule-details">
+                        <h5>Monday</h5>
+                        <div class="line"></div>
+                        <div class="start">
+                            <div class="date">
+                                <span>12</span>
+                                <span>February</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="time">
+                                <span>12</span>
+                                :
+                                <span>30</span>
+                            </div>
+                        </div>
+                        <div class="super-line">
+                            <div class="line"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="end">
+                            <div class="date">
+                                <span>12</span>
+                                <span>February</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="time">
+                                <span>12</span>
+                                :
+                                <span>30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button [routerLink]="['/todo/todo-list/edit-todo', 1]">Edit</button>
+                <button type="button">Delete</button>
+            </div>
+        </div>
+    </div>
+</main>

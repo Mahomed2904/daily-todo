@@ -1,3 +1,24 @@
 <main>
-
+    <!-- <section class="form-hero">
+        <h2>Your todo are scheduled in your google calendar also.</h2>
+    </section> -->
+    <section class="form-container">
+        <div class="exit-container"><lucide-icon name="X" class="x" (click)="backPage()" size="22"></lucide-icon></div>
+        <h3>New Todo</h3>
+        <form class="columns">
+            <div class="form">
+                <app-form-text-input inputName="title" inputType="text" labelName="Title" placehoder="write the title of the todo"></app-form-text-input>
+                <app-form-text-area inputName="description" labelName="Description" placehoder="write the description of the todo"></app-form-text-area>
+                <app-form-shedule-area></app-form-shedule-area>
+                <app-form-image-input inputName="image" labelId="im" labelName="Image (Optional)"></app-form-image-input>
+            </div>
+            <div class="buttons">
+                <button>Save</button>
+                <button type="button" (click)="backPage()">Cancel</button>
+                <div class="duration-area">
+                    <app-form-during-input></app-form-during-input>
+                </div>
+            </div>
+        </form>
+    </section>
 </main>
