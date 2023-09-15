@@ -11,7 +11,7 @@ export class FormSelectInputComponent {
   @Input() select: string | undefined
   @Input() elements:  {id: number, value: string}[] = []
   @Input() defaultSelected: {id: number, value: string} | undefined
-  @Output() onSelectChange: EventEmitter<{id: number, value: string}> = new EventEmitter()
+  @Output() onSelectChange: EventEmitter<number> = new EventEmitter()
 
   showDropDown = "hidde"
   extraWidth = "width: fit-content"
@@ -31,7 +31,7 @@ export class FormSelectInputComponent {
       value
     };
     (document.querySelector(`.${this.labelName}`) as HTMLButtonElement).click()
-    this.onSelectChange.emit(this.selectedValue)
+    this.onSelectChange.emit(this.selectedValue?.id)
   }
 
   showDropDownMenu(){

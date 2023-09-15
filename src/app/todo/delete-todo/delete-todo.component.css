@@ -1,0 +1,106 @@
+main {
+    padding: 0 12px;
+    min-height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+main .confirm-delete {
+    width: 456px;
+    height: 220px;
+    max-height: 200px;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .exit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .x {
+    color: var(--violet-light);
+}
+
+main .x:hover {
+    cursor: pointer;
+    color: var(--violet);
+}
+
+.confirm-delete .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+}
+
+.confirm-delete .question {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.confirm-delete .question p:first-child {
+    color: var(--violet);
+    font-weight: 600;
+}
+
+
+.confirm-delete .question p:nth-child(2) {
+    color: var(--slate-dark);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.confirm-delete .buttons  button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.confirm-delete .buttons  button:hover {
+    cursor: pointer;
+}
+
+.confirm-delete .buttons  .confirm {
+    background-color: var(--red-light);
+    border: 1px solid var(--red-light);
+    color: white;
+}
+
+.confirm-delete .buttons  .confirm:hover {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+}
+
+.confirm-delete .buttons  .confirm:focus {
+    outline: 1px solid var(--red-dark);
+    border: 1px solid var(--red-dark);
+}
+
+.confirm-delete .buttons  .cancel {
+    background-color: white;
+    border: 1px solid var(--violet-light);
+    color: var(--violet);
+}
+
+.confirm-delete .buttons .cancel:hover {
+    border: 1px solid var(--violet);
+}
+
+.confirm-delete .buttons .cancel:focus {
+    outline: 1px solid var(--violet);
+}

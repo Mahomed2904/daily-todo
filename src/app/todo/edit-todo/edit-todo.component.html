@@ -4,19 +4,25 @@
     </section> -->
     <section class="form-container">
         <div class="exit-container"><lucide-icon name="X" class="x" (click)="backPage()" size="22"></lucide-icon></div>
-        <h3>New Todo</h3>
+        <h3>Edit Todo</h3>
         <form class="columns">
             <div class="form">
-                <app-form-text-input inputName="title" inputType="text" labelName="Title" placehoder="write the title of the todo"></app-form-text-input>
-                <app-form-text-area inputName="description" labelName="Description" placehoder="write the description of the todo"></app-form-text-area>
-                <app-form-shedule-area></app-form-shedule-area>
-                <app-form-image-input inputName="image" labelId="im" labelName="Image (Optional)"></app-form-image-input>
+                <app-form-text-input inputName="title" inputType="text" labelName="Title" placehoder="write the title of the todo" 
+                    defaultValue="Go to the market buy a new car">
+                </app-form-text-input>
+                <app-form-text-area inputName="description" labelName="Description" placehoder="write the description of the todo"
+                    defaultValue="I will go to the market to buy a new car, because my current car is not good">
+                </app-form-text-area>
+                <app-form-shedule-area [defaultValue]="defaultValue"></app-form-shedule-area>
+                <app-form-image-input inputName="image" labelId="im" labelName="Image (Optional)"
+                        defaultValue="https://images.pexels.com/photos/3333923/pexels-photo-3333923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    ></app-form-image-input>
             </div>
             <div class="buttons">
                 <button>Save</button>
                 <button type="button" (click)="backPage()">Cancel</button>
                 <div class="duration-area">
-                    <app-form-during-input></app-form-during-input>
+                    <app-form-during-input defaultValue="90"></app-form-during-input>
                 </div>
             </div>
         </form>

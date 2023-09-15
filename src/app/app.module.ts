@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UsersModule } from './access-control/users.module';
 import { PresentationModule } from './presentation/presentation.module';
 import { TodoModule } from './todo/todo.module';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { TodoModule } from './todo/todo.module';
     PresentationModule,
     UsersModule,
     TodoModule,
+    UserModule,
     AppRoutingModule,
     LucideAngularModule.pick({Moon}),
   ],

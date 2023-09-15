@@ -1,5 +1,5 @@
 <div class="form-input">
     <label [for]="inputName">{{labelName}}</label>
-    <textarea [id]="inputName" [name]="inputName" [placeholder]="placehoder"></textarea>
+    <textarea [id]="inputName" [name]="inputName" [placeholder]="placehoder" [defaultValue]="defaultValue" (change)="onChange($event)"></textarea>
 </div>
 

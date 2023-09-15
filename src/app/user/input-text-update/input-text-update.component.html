@@ -1,0 +1,9 @@
+<div class="form-input">
+    <label [for]="inputName">{{labelName}}</label>
+    <input [id]="inputName" [name]="inputName" [placeholder]="placehoder" [type]="inputType" 
+        [defaultValue]="defaultValue" (change)="onChange($event)">
+    <div class="buttons">
+        <button class="save" (click)="save($event)">Save</button>
+        <button class="cancel" (click)="onCancel.emit()">Cancel</button>
+    </div>
+</div>

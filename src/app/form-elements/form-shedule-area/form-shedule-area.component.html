@@ -2,14 +2,19 @@
     <label for="shedule">Sheduling</label>
     <div id="shedule" class="shedule">
         <div class="date">
-            <app-form-select-input inputName="day" labelName="Day" [elements]="days" [defaultSelected]="defaultDay"></app-form-select-input>
-            <app-form-select-input inputName="month" labelName="Month" [elements]="months" [defaultSelected]="defaultMonth"></app-form-select-input>
-            <app-form-select-input inputName="year" labelName="Year" [elements]="years" [defaultSelected]="defaultYear"></app-form-select-input>
+            <app-form-select-input inputName="day" labelName="Day" [elements]="days" [defaultSelected]="defaultDay" 
+                    (onSelectChange)="onChangeDay($event)"></app-form-select-input>
+            <app-form-select-input inputName="month" labelName="Month" [elements]="months" [defaultSelected]="defaultMonth" 
+                    (onSelectChange)="onChangeMonth($event)"></app-form-select-input>
+            <app-form-select-input inputName="year" labelName="Year" [elements]="years" [defaultSelected]="defaultYear" 
+                    (onSelectChange)="onChangeYear($event)"></app-form-select-input>
         </div>
         <div class="separator"></div>
         <div class="time">
-            <app-form-select-input inputName="hour" labelName="Hour" [elements]="hours" [defaultSelected]="defaultHour"></app-form-select-input>
-            <app-form-select-input inputName="minute" labelName="Minute" [elements]="minutes" [defaultSelected]="defaultMinute"></app-form-select-input>
+            <app-form-select-input inputName="hour" labelName="Hour" [elements]="hours" [defaultSelected]="defaultHour" 
+                    (onSelectChange)="onChangeHour($event)"></app-form-select-input>
+            <app-form-select-input inputName="minute" labelName="Minute" [elements]="minutes" [defaultSelected]="defaultMinute"
+                    (onSelectChange)="onChangeMinute($event)"></app-form-select-input>
         </div>
     </div>
 </div>

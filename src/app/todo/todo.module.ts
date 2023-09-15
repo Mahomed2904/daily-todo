@@ -10,6 +10,7 @@ import { EditTodoComponent } from './edit-todo/edit-todo.component';
 import { LucideAngularModule, Moon, Search, X, Upload } from 'lucide-angular';
 import { FormElementsModule } from '../form-elements/form-elements.module';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { DeleteTodoComponent } from './delete-todo/delete-todo.component';
 
 
 @NgModule({
@@ -19,13 +20,17 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     ListTodoComponent,
     AddTodoComponent,
     EditTodoComponent,
-    TodoDetailsComponent
+    TodoDetailsComponent,
+    DeleteTodoComponent,
   ],
   imports: [
     CommonModule,
     TodoRoutingModule,
     FormElementsModule,
     LucideAngularModule.pick({Moon, Search, X, Upload})
+  ],
+  exports: [
+    LayoutComponent,
   ]
 })
 export class TodoModule { }

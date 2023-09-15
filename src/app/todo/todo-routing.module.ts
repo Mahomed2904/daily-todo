@@ -7,6 +7,7 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
+import { DeleteTodoComponent } from './delete-todo/delete-todo.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
               path: "edit-todo/:id",
               title: "Edit Todo",
               component: EditTodoComponent
+            },
+            {
+              path: "delete-todo/:id",
+              title: "Delete Todo",
+              component: DeleteTodoComponent
             },
           ]
         },

@@ -11,13 +11,20 @@ export class FormImageInputComponent {
   @Input() labelName: string | undefined
   @Input() labelId: string | undefined
   @Input() placehoder: string = ""
-  @Output() image: EventEmitter<string> = new EventEmitter()
+  @Input() defaultValue: string | undefined
+  @Output() onChangeImage: EventEmitter<string> = new EventEmitter()
 
   constructor(private converter: ImageFormatConverterService) {}
 
   imageUrl = ""
   encodedImage: string | undefined
   showLinkModal = ""
+
+  ngOnInit() {
+    if(this.defaultValue) {
+      this.imageUrl = this.defaultValue
+    }
+  }
   
   showModalLink() {
     this.showLinkModal = "show"
@@ -32,12 +39,12 @@ export class FormImageInputComponent {
       this.imageUrl = url
       this.encodedImage = (await this.converter.toBase64(e.target.files[0])) as string
     }
-    this.image.emit(this.encodedImage)
+    this.onChangeImage.emit(this.encodedImage)
   }
 
   selectLink(e: any) {
     this.imageUrl = e.target.value
-    this.image.emit(this.imageUrl)
+    this.onChangeImage.emit(this.imageUrl)
   }
 
   uploadImageFromLink(e: any) {

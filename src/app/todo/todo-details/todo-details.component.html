@@ -20,14 +20,14 @@
                         I will go to the market to buy a new car, because my current car is not good
                     </p>
                     <div class="label">
-                        <span>Sheduling</span>
+                        <span>Scheduling</span>
                         <div class="subline">
                             <div class="circle"></div>
                             <div class="line"></div>
                         </div>
                     </div>
                     <div class="shedule-details">
-                        <h5>Monday</h5>
+                        <h5>Monday <span>120 minutes</span></h5>
                         <div class="line"></div>
                         <div class="start">
                             <div class="date">
@@ -43,7 +43,8 @@
                         </div>
                         <div class="super-line">
                             <div class="line"></div>
-                            <div class="circle"></div>
+                            <div class="circle">
+                            </div>
                         </div>
                         <div class="end">
                             <div class="date">
@@ -62,7 +63,7 @@
             </div>
             <div class="buttons">
                 <button [routerLink]="['/todo/todo-list/edit-todo', 1]">Edit</button>
-                <button type="button">Delete</button>
+                <button type="button" [routerLink]="['/todo/todo-list/delete-todo', 1]">Delete</button>
             </div>
         </div>
     </div>

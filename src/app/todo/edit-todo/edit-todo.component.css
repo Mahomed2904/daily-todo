@@ -101,6 +101,15 @@ main .columns .buttons button:first-child {
     font-size: 11px;
 }
 
+main .columns .buttons button:first-child:hover {
+    border: 1px solid var(--violet);
+    background-color: var(--violet-dark);
+}
+
+main .columns .buttons button:first-child:focus {
+    outline: 1px solid var(--violet-dark);
+}
+
 main .columns .buttons button:nth-child(2) {
     border: 1px solid var(--red-light);
     padding: 12px 12px;
@@ -109,6 +118,16 @@ main .columns .buttons button:nth-child(2) {
     background-color: white;
     font-size: 11px;
     text-align: center;
+}
+
+main .columns .buttons button:nth-child(2):hover {
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+main .columns .buttons button:nth-child(2):focus {
+    outline: 1px solid var(--red);
+    color: var(--red);
 }
 
 main .columns .buttons button:hover {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ListTodoComponent } from '../list-todo/list-todo.component';
 
 @Component({
   selector: 'app-layout',
@@ -19,5 +20,11 @@ export class LayoutComponent {
 
   changeCurrentTo(c: number) {
     this.current = c
+  }
+
+  onActivate(component: Component) {
+    if(component instanceof ListTodoComponent) {
+      this.current = 2
+    }
   }
 }

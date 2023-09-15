@@ -1,0 +1,49 @@
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--slate)
+}
+
+.form-input input {
+    padding: 10px 10px;
+    font-size: 12px;
+    border: 1px solid var(--violet-light);
+    border-radius: 8px;
+    outline:violet;
+}
+
+.form-input input:focus {
+    border: 1px solid var(--violet);
+    outline: 1px solid var(--violet);
+}
+
+input::placeholder {
+    color: var(--violet-light)
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.buttons button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.buttons .save {
+    background-color: var(--violet);
+    color: white;
+    border: 1px solid white;
+}
+
+.buttons .cancel {
+    background-color: transparent;
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+}

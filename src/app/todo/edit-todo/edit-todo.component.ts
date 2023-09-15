@@ -8,7 +8,15 @@ import { Location } from '@angular/common';
   styleUrls: ['./edit-todo.component.css']
 })
 export class EditTodoComponent {
-  constructor(private router: Router, private location: Location) {}
+    constructor(private router: Router, private location: Location) {}
+
+    defaultValue = {
+      day: 10,
+      month: 2,
+      year: 2024,
+      hour: 12,
+      minute: 40
+    }
 
     backPage() {
       this.location.back()

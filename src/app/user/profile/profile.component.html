@@ -1,0 +1,69 @@
+<main>
+    <div class="todo-details">
+        <div class="exit-container"><lucide-icon name="X" class="x" size="22" (click)="backPage()"></lucide-icon></div>
+        <h2>My profile</h2>
+        <div class="columns">
+            <div class="details">
+                <div class="main-data">
+                    <div class="profile-photo">
+                        <img [src]="user.photo">
+                        <label for="image"><lucide-icon name="pencil" class="pencil" size="14"></lucide-icon></label>
+                        <input type="file" name="image" id="image" accept="image/*" (change)="uploadImageFromStorage($event)">
+                    </div>
+                    <div class="profile-name">
+                        <div *ngIf="!changeName">
+                            <h3>{{user.name}}</h3>
+                            <lucide-icon name="pencil" class="pencil" size="12" (click)="activateChangeName()"></lucide-icon>
+                        </div>
+                        <div *ngIf="changeName">
+                            <app-input-text-update inputName="name" labelName="Name" [defaultValue]="user.name" 
+                                (onCancel)="cancelNameChange()" (onSave)="saveNameChange($event)"></app-input-text-update>
+                        </div>
+                    </div>
+                </div>
+                <div class="other-details">
+                    <div class="left">
+                        <div *ngIf="!changeEmail">
+                            <div class="label">
+                                <span>Email <lucide-icon name="pencil" class="pencil" size="12" (click)="activateChangeEmail()"></lucide-icon></span>
+                                <div class="subline">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <p>
+                               {{user.email}}
+                            </p>
+                        </div>
+                        <div *ngIf="changeEmail">
+                            <app-input-text-update inputName="Email" labelName="Email" [defaultValue]="user.email" 
+                                    (onCancel)="cancelEmailChange()" (onSave)="saveEmailChange($event)"></app-input-text-update>
+                       </div>
+                    </div>
+                   
+                    <div class="right">
+                       <div *ngIf="!changeContact">
+                            <div class="label">
+                                <span>Phone Number <lucide-icon name="pencil" class="pencil" size="12" (click)="activateChangeContact()"></lucide-icon></span>
+                                <div class="subline">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <p>
+                                {{user.phoneNumber}}
+                            </p>
+                       </div>
+                       <div *ngIf="changeContact">
+                            <app-input-text-update inputName="phone-number" labelName="Phone number" [defaultValue]="user.phoneNumber"
+                                 (onCancel)="cancelContactChange()" (onSave)="saveContactChanges($event)"></app-input-text-update>
+                       </div>
+                    </div>
+
+                    <a class="change-password" [routerLink]="['/user/change-password', 1]">Change Password</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" (click)="backPage()">Close</button>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form-text-area',
@@ -10,4 +10,11 @@ export class FormTextAreaComponent {
   @Input() labelName: string | undefined
   @Input() inputType: 'text' | 'number' | "password" | undefined
   @Input() placehoder: string = ""
+  @Input() defaultValue: string = ""
+  @Output() onValueChange: EventEmitter<string> = new EventEmitter()
+
+
+  onChange(e: any) {
+    this.onValueChange.emit(e.target.value)
+  }
 }

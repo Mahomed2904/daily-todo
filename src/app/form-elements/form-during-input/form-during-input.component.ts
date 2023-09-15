@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form-during-input',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-during-input.component.css']
 })
 export class FormDuringInputComponent {
-
+  @Input() defaultValue: string = ""
+  @Output() onValueChange: EventEmitter<string> = new EventEmitter()
+  
+  onChange(e: any) {
+    this.onValueChange.emit(e.target.value)
+  }
 }

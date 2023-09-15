@@ -1,7 +1,7 @@
 <div class="duration-field">
     <label>Duration</label>
     <div class="text-area">
-        <input name="duration">
+        <input name="duration" [defaultValue]="defaultValue" (change)="onChange($event)">
         <span>Minutes</span>
     </div>
 </div>
