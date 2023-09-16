@@ -16,6 +16,13 @@ export class InputTextUpdateComponent {
   @Output() onSave: EventEmitter<string> = new EventEmitter()
 
   currentValue = ""
+  labelColor = ""
+
+  ngOnInit() {
+    if(this.labelName == 'Name') {
+      this.labelColor = "white"
+    }
+  }
 
   onChange(e: any) {
     this.currentValue = e.target.value

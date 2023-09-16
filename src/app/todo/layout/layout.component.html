@@ -1,6 +1,6 @@
 <header class="nav-container">
     <nav class="nav-bar">
-        <a routerLink="./dashbord" (click)="changeCurrentTo(1)" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page"  class="site-name">
+        <a routerLink="./dashbord" (click)="setSelectedMenuOption(1)" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page"  class="site-name">
             <div>
                 <img src="assets/img/daily-icon.svg">
             </div>
@@ -11,15 +11,28 @@
         <div class="others">
             <nav class="inner-nav">
                 <ul>
-                    <li><a routerLink="./dashbord" [class.selected]="current == 1" (click)="changeCurrentTo(1)">Home</a></li>
-                    <li><a [routerLink]="['./todo-list', {day: 'ALL'}]" [class.selected]="current == 2" (click)="changeCurrentTo(2)">Todo</a></li>
+                    <li><a routerLink="./dashbord" [class.selected]="selectedMenuOption == 1" (click)="setSelectedMenuOption(1)">Home</a></li>
+                    <li><a [routerLink]="['./todo-list', {day: 'ALL'}]" [class.selected]="selectedMenuOption == 2" (click)="setSelectedMenuOption(2)">Todo</a></li>
                 </ul>
             </nav>
             <div class="separator"></div>
             <div class="action-icons">
                 <lucide-angular name="moon" class="moon"></lucide-angular>
                 <div class="user-icon">
-                    <img src="assets/img/profile_photo.jpg">
+                    <input id="input" type="checkbox">
+                    <label for="input">
+                        <img src="assets/img/profile_photo.jpg" (click)="startShowUserOptions()">
+                    </label>
+                    <div class="login-informations">
+                        <div class="user-data">
+                            <h4>Mahomed Aly Issumail</h4>
+                            <p>mahomedalyissumail@gmail.com</p>
+                        </div>
+                        <div class="login-options">
+                            <span (click)="showProfile()">profile</span>
+                            <span (click)="logout()">Sign Out</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

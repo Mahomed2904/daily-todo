@@ -71,4 +71,13 @@ export class ProfileComponent {
       this.showImageModal = true
     }
   }
+
+  saveImage() {
+    this.user.photo = this.imageUrl
+    this.showImageModal = false
+  }
+
+  closeImageModal() {
+    this.showImageModal = false
+  }
 }

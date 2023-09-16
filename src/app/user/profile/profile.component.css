@@ -335,3 +335,92 @@ main .columns .buttons button:hover {
     color: var(--violet);
     cursor: pointer;
 }
+
+.image-modal {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    margin-top: 5%;
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 18px 24px;
+    border-radius: 8px;
+}
+
+.image-container .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.image-container .container div:nth-child(2) {
+    height: 90%;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.image-container .container div:nth-child(2) button {
+    border: none;
+    font-size: 12px;
+    padding: 11px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.image-container .container div:nth-child(2) button:first-child {
+    background-color: var(--violet);
+    color: white;
+    border: 1px solid var(--violet);
+}
+
+.image-container .container div:nth-child(2) button:nth-child(2) {
+    background-color: transparent;
+    color: var(--red-light);
+    border: 1px solid var(--red-light);
+}
+
+.image-container .container div:nth-child(2) button:first-child:hover {
+    border: 1px solid var(--violet);
+    background-color: var(--violet-dark);
+}
+
+.image-container .container div:nth-child(2) button:first-child:focus {
+    outline: 1px solid var(--violet-dark);
+}
+
+.image-container .container div:nth-child(2) button:nth-child(2):hover {
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.image-container .container div:nth-child(2) button:nth-child(2):focus {
+    outline: 1px solid var(--red);
+    color: var(--red);
+}
+
+
+.container .image {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .image img {
+    height: 80%;
+    border-radius: 8px;
+}
+
+.sub-line {
+    border-bottom: 1px solid var(--violet-light);
+}

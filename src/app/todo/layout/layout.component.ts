@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { DashbordComponent } from '../dashbord/dashbord.component';
 import { Router } from '@angular/router';
-import { ListTodoComponent } from '../list-todo/list-todo.component';
 
 @Component({
   selector: 'app-layout',
@@ -8,23 +8,45 @@ import { ListTodoComponent } from '../list-todo/list-todo.component';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
-  current = 1
+  selectedMenuOption = 1
+  showUserOptions = false
 
-  constructor(private router: Router) {
-    if(router.url.split(";")[0] == "/todo/dashbord") {
-      this.current = 1
-    } else {
-      this.current = 2
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    const element = (document.getElementById("input") as HTMLInputElement)
+    window.onblur = (e: any) => {
+      this.dontShowUserOptions()
     }
   }
 
-  changeCurrentTo(c: number) {
-    this.current = c
+  setSelectedMenuOption(c: number) {
+    this.selectedMenuOption = c
   }
 
   onActivate(component: Component) {
-    if(component instanceof ListTodoComponent) {
-      this.current = 2
+    if(component instanceof DashbordComponent) {
+      this.setSelectedMenuOption(1)
+    } else {
+      this.setSelectedMenuOption(2)
     }
+  }
+
+  startShowUserOptions() {
+    this.showUserOptions = !this.showUserOptions
+  }
+
+  dontShowUserOptions() {
+    this.showUserOptions = false
+  }
+
+  logout() {
+    this.dontShowUserOptions()
+    this.router.navigate(["/ap/signin"])
+  }
+
+  showProfile() {
+    this.dontShowUserOptions()
+    this.router.navigate(["/user/profile"])
   }
 }

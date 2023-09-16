@@ -8,6 +8,7 @@ import { LucideAngularModule, Upload, Link, ChevronDown, ChevronUp, Check } from
 import { ImageFormatConverterService } from '../services/image-format-converter.service';
 import { FormSelectInputComponent } from './form-select-input/form-select-input.component';
 import { FormDuringInputComponent } from './form-during-input/form-during-input.component';
+import { MessageStatusComponent } from './message-status/message-status.component';
 
 
 
@@ -18,7 +19,8 @@ import { FormDuringInputComponent } from './form-during-input/form-during-input.
     FormSheduleAreaComponent,
     FormImageInputComponent,
     FormSelectInputComponent,
-    FormDuringInputComponent
+    FormDuringInputComponent,
+    MessageStatusComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { FormDuringInputComponent } from './form-during-input/form-during-input.
     FormTextInputComponent,
     FormSheduleAreaComponent,
     FormImageInputComponent,
-    FormDuringInputComponent
+    FormDuringInputComponent,
+    MessageStatusComponent
   ],
   providers: [
     ImageFormatConverterService

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-recovery-password',
+  templateUrl: './recovery-password.component.html',
+  styleUrls: ['./recovery-password.component.css']
 })
-export class SignupComponent {
+export class RecoveryPasswordComponent {
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -14,6 +14,6 @@ export class SignupComponent {
 
   onSubmit(e: Event): void {
     e.preventDefault()
-    this.router.navigate(['/ap/email-confirmation-code']);
+    this.router.navigate(['/ap/confirm-recovery']);
   }
 }

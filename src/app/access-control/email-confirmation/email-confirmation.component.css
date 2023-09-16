@@ -1,0 +1,243 @@
+.recovery {
+    height: calc(100vh - 76px);
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 42px;
+    gap: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 1000px) {
+    .recovery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        display: none;
+    }
+}
+
+.recovery .hero img {
+    height: 450px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--violet);
+    font-weight: 600;
+}
+
+.form-container {
+    padding: 0 42px;
+    height: 456px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.form-container .form {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    font-size: 16px;
+    color: var(--slate-dark);
+}
+
+.form p:nth-child(1) {
+    font-size: 18px;
+}
+
+.form p:nth-child(2) {
+    color: var(--violet);
+    font-weight: 600;
+}
+
+.form .form-row {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "left right";
+    gap: 32px;
+}
+
+.form-row:first-child {
+    grid-area: "left";
+}
+
+.form-row:nth-child(2) {
+    grid-area: "right";
+}
+
+.form .password {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form .password a {
+    text-align: right;
+    color: var(--violet-800);
+}
+
+.form .password a:hover {
+    color: var(--violet);
+}
+
+.form .button-signin {
+    width: fit-content;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--violet);
+    color: white;
+    font-size: 12px;
+}
+
+.form .button-signin:hover {
+    cursor: pointer;
+}
+
+.form .signup-suggestion {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.code {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 28px;
+}
+
+.code span {
+    font-weight: 600;
+    color: var(--violet);
+}
+
+.code input {
+    
+    padding: 12px 6px;
+    outline: none;
+    width: 40px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 4px;
+    border: 1px solid var(--violet-light);
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .confirmation-status {
+    padding: 0 12px;
+    min-height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /**********/
+
+  .confirmation-status .message-status {
+    width: 456px;
+    height: 220px;
+    max-height: 200px;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.confirmation-status .exit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirmation-status .x {
+    color: var(--violet-light);
+}
+
+.confirmation-status .x:hover {
+    cursor: pointer;
+    color: var(--violet);
+}
+
+.message-status .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+}
+
+.message-status .message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.message-status .message p:first-child {
+    color: var(--violet);
+    font-weight: 600;
+}
+
+
+.message-status .message p:nth-child(2) {
+    color: var(--slate-dark);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.message-status .buttons  button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.message-status .buttons  button:hover {
+    cursor: pointer;
+}
+
+.message-status .buttons  .confirm {
+    background-color: var(--violet);
+    border: 1px solid var(--violet);
+    color: white;
+}
+
+.message-status .buttons  .confirm:hover {
+    background-color: var(--violet-dark);
+    border: 1px solid var(--violet-dark);
+}
+
+.message-status .buttons  .confirm:focus {
+    outline: 1px solid var(--violet);
+    border: 1px solid var(--violet);
+}

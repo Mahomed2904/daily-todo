@@ -7,6 +7,10 @@ import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LucideAngularModule, Moon } from 'lucide-angular';
 import { FormElementsModule } from '../form-elements/form-elements.module';
+import { RecoveryPasswordComponent } from './recovery-password/recovery-password.component';
+import { RecoveryStatusComponent } from './recovery-status/recovery-status.component';
+import { NewPasswordComponent } from './new-password/new-password.component';
+import { EmailConfirmationComponent } from './email-confirmation/email-confirmation.component';
 
 
 @NgModule({
@@ -14,6 +18,10 @@ import { FormElementsModule } from '../form-elements/form-elements.module';
     LayoutComponent,
     LoginComponent,
     SignupComponent,
+    RecoveryPasswordComponent,
+    RecoveryStatusComponent,
+    NewPasswordComponent,
+    EmailConfirmationComponent,
   ],
   imports: [
     CommonModule,

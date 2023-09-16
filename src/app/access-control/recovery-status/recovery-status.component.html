@@ -1,0 +1,20 @@
+<main class="recovery">
+    <div class="hero">
+        <p>Confirm your email...</p>
+        <img src="assets/img/recovery-p.png">
+    </div>
+    <div class="form-container">
+        <form class="form" (submit)="onSubmit($event)">
+            <p>Please, visit your email to get the confirmation code</p>
+            <div class="code">
+                <!-- <span>DT</span><span>-</span> -->
+                <input type="number" class="number" (keyup)="onKeyUp($event)">
+                <input type="number" class="number" (keyup)="onKeyUp($event)">
+                <input type="number" class="number" (keyup)="onKeyUp($event)">
+                <input type="number" class="number" (keyup)="onKeyUp($event)">
+            </div>
+            <button class="button-signin">Continue</button>
+        </form>
+        <p>Back to <a routerLink="/ap/signin">Signin</a></p>
+    </div>
+</main>

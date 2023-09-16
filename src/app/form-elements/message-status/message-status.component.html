@@ -1,0 +1,12 @@
+<div class="message-status-container">
+    <div class="message-status">
+        <div class="exit-container"><lucide-icon name="X" class="x" size="22" (click)="onClose()"></lucide-icon></div>
+        <div class="message">
+            <p>{{mainMessage}}</p>
+            <p>{{description}}</p>
+        </div>
+        <div class="buttons">
+            <button class="confirm" (click)="onClose()">Ok</button>
+        </div>
+    </div>
+</div>

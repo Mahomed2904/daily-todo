@@ -5,7 +5,7 @@
     </div>
     <div class="form-container">
         <h2>Signup</h2>
-        <form class="form" method="post" action="/">
+        <form class="form" method="post" (submit)="onSubmit($event)">
             <div class="form-row">
                 <app-form-text-input inputName="Email" inputType="text" labelName="Email" placehoder="please insert your email"></app-form-text-input>
                 <app-form-text-input inputName="Name" inputType="text" labelName="Name" placehoder="please insert your name"></app-form-text-input>

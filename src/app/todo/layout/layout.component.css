@@ -107,19 +107,86 @@
 }
 
 .user-icon {
+    height: fit-content;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 0;
 }
 
-.user-icon img:hover {
+.user-icon input {
+    all: unset;
+}
+
+
+.user-icon label {
+    border: 1px solid var(--violet-light);
+    border-radius: 100%;
+    display: flex;
+}
+
+
+.user-icon label:hover {
     cursor: pointer;
     border: 1px solid var(--violet);
+}
+
+.user-icon:has(input:focus) label {
+    outline: 1px solid var(--violet);
 }
 
 .user-icon img {
     width: 28px;
     height: 28px;
-    border: 1px solid var(--violet-light);
     border-radius: 100%;
+    background-color: aqua;
+}
+
+
+.login-informations {
+    position: absolute;
+    right: -16px;
+    top: 32px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user-icon:has(input:checked) .login-informations   {
+    display: flex;
+}
+
+.login-informations {
+    display: none;
+}
+
+.login-informations h4 {
+    font-weight: 600;
+    color: var(--violet);
+}
+
+.login-informations p {
+    color: var(--slate-dark);
+}
+
+.login-informations .user-data {
+    padding: 12px 12px 6px 12px;
+    border-bottom: 1px solid var(--neutral-light);
+}
+
+.login-informations .login-options span {
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: column;
+    color: var(--slate-dark);
+    cursor: pointer;
+}
+
+.login-informations .login-options span:hover {
+    background-color: var(--neutral-light);
 }
