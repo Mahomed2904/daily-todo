@@ -37,7 +37,7 @@ main .x:hover {
 
 .exit-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .todo-details .columns {
@@ -157,15 +157,6 @@ main .x:hover {
     gap: 16px;
 }
 
-/* .other-details .left {
-   width: 100%;
-}
-
-.other-details .right {
-    padding: 20px 0;
-    width: 100%;
-} */
-
 .other-details .label {
     display: flex;
     flex-direction: column;
@@ -220,84 +211,6 @@ main .x:hover {
     background-color: var(--violet);
 }
 
-.shedule-details {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    padding-left: 16px;
-    padding-right: 8px;
-    gap: 2px;
-}
-
-.shedule-details h5 {
-    font-size: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--slate-dark);
-}
-
-.shedule-details h5 span {
-    padding: 1px 4px;
-    padding-top: 2px;
-    border: 1px solid silver;
-    border-radius: 16px;
-    color: gray;
-    font-size: 11px;
-}
-
-.shedule-details .line {
-    height: 1px;
-    width: 100%;
-    background-color: var(--violet-light);
-}
-
-.shedule-details .start {
-    box-sizing: border-box;
-    margin-top: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.date, .time {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.date span, .time span {
-    display: flex;
-    box-sizing: border-box;
-    padding: 6px;
-    background-color: rgb(214, 214, 214);
-    border-radius: 4px;
-}
-
-.shedule-details .end {
-    box-sizing: border-box;
-    margin-top: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.super-line {
-    position: relative;
-}
-
-.super-line .circle {
-    position: absolute;
-    padding: 8px;
-    background-color: var(--violet);
-    border-radius: 16px;
-    bottom: -8px;
-    left: 58%;
-    color: white;
-}
-
 
 main .columns .buttons {
     display: flex;
@@ -334,93 +247,4 @@ main .columns .buttons button:hover {
     font-size: 12px;
     color: var(--violet);
     cursor: pointer;
-}
-
-.image-modal {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-}
-
-.image-container {
-    margin-top: 5%;
-    width: 80%;
-    height: 70%;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 18px 24px;
-    border-radius: 8px;
-}
-
-.image-container .container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.image-container .container div:nth-child(2) {
-    height: 90%;
-    display: flex;
-    gap: 10px;
-    align-items: flex-end;
-}
-
-.image-container .container div:nth-child(2) button {
-    border: none;
-    font-size: 12px;
-    padding: 11px 18px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.image-container .container div:nth-child(2) button:first-child {
-    background-color: var(--violet);
-    color: white;
-    border: 1px solid var(--violet);
-}
-
-.image-container .container div:nth-child(2) button:nth-child(2) {
-    background-color: transparent;
-    color: var(--red-light);
-    border: 1px solid var(--red-light);
-}
-
-.image-container .container div:nth-child(2) button:first-child:hover {
-    border: 1px solid var(--violet);
-    background-color: var(--violet-dark);
-}
-
-.image-container .container div:nth-child(2) button:first-child:focus {
-    outline: 1px solid var(--violet-dark);
-}
-
-.image-container .container div:nth-child(2) button:nth-child(2):hover {
-    border: 1px solid var(--red);
-    color: var(--red);
-}
-
-.image-container .container div:nth-child(2) button:nth-child(2):focus {
-    outline: 1px solid var(--red);
-    color: var(--red);
-}
-
-
-.container .image {
-    height: 94%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container .image img {
-    height: 80%;
-    border-radius: 8px;
-}
-
-.sub-line {
-    border-bottom: 1px solid var(--violet-light);
 }

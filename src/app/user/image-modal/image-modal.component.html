@@ -1,0 +1,14 @@
+<div class="image-modal">
+    <div class="image-container">
+        <div class="exit-container sub-line"><lucide-icon name="X" class="x" size="24" (click)="onCancelImage.emit()"></lucide-icon></div>
+        <div class="container">
+            <div class="image">
+                <img [src]="imageUrl">
+            </div>
+            <div>
+                <button type="button" (click)="onSaveImage.emit()">Save</button>
+                <button type="button"  (click)="onCancelImage.emit()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -66,18 +66,5 @@
             </div>
         </div>
     </div>
-    <div *ngIf="showImageModal" class="image-modal">
-        <div class="image-container">
-            <div class="exit-container sub-line"><lucide-icon name="X" class="x" size="24" (click)="closeImageModal()"></lucide-icon></div>
-            <div class="container">
-                <div class="image">
-                    <img [src]="imageUrl">
-                </div>
-                <div>
-                    <button type="button" (click)="saveImage()">Save</button>
-                    <button type="button"  (click)="closeImageModal()">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-image-modal *ngIf="showImageModal" [imageUrl]="imageUrl" (onCancelImage)="closeImageModal()" (onSaveImage)="saveImage()"></app-image-modal>
 </main>
