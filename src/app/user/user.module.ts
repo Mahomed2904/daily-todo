@@ -8,17 +8,21 @@ import { TodoModule } from '../todo/todo.module';
 import { LucideAngularModule, Moon, Search, X, Upload, Pencil } from 'lucide-angular';
 import { InputTextUpdateComponent } from './input-text-update/input-text-update.component';
 import { ImageModalComponent } from './image-modal/image-modal.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { FormElementsModule } from '../form-elements/form-elements.module';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
     InputTextUpdateComponent,
-    ImageModalComponent
+    ImageModalComponent,
+    ChangePasswordComponent
   ],
   imports: [
     CommonModule,
     TodoModule,
+    FormElementsModule,
     UserRoutingModule,
     LucideAngularModule.pick({X, Pencil})
   ]
