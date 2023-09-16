@@ -37,7 +37,7 @@ main .x:hover {
 
 .exit-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .todo-details .columns {
